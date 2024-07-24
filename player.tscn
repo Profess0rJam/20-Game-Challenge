@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcongnkjwm6pb"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_8hwgl"]
+[ext_resource type="Texture2D" uid="uid://de7synacnhe5o" path="res://Assets/Avatar.png" id="1_o8qqa"]
+[ext_resource type="Texture2D" uid="uid://cbuo2j6i1x364" path="res://Assets/PogAvatar.png" id="2_qmeok"]
+[ext_resource type="Texture2D" uid="uid://dvu317w4qlc25" path="res://Assets/jetstream.png" id="4_5fxgm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ijey2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o8qqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qmeok")
+}],
+"loop": true,
+"name": &"boost",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omdat"]
+size = Vector2(96, 96)
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.355, 0.355)
+motion_mode = 1
+script = ExtResource("1_8hwgl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ijey2")
+animation = &"boost"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_omdat")
+
+[node name="jetstream" type="CPUParticles2D" parent="."]
+position = Vector2(0, 112.676)
+scale = Vector2(0.125, 0.125)
+emitting = false
+amount = 4
+lifetime = 0.5
+fixed_fps = 30
+draw_order = 1
+texture = ExtResource("4_5fxgm")
+gravity = Vector2(0, 98)
