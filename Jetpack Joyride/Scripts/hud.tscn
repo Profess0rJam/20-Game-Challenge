@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://j2ho07kqgjlu"]
+
+[ext_resource type="Texture2D" uid="uid://c01014n6yg21m" path="res://Assets/StartButton.png" id="1_eep2w"]
+[ext_resource type="Script" path="res://hud.gd" id="1_qbhkn"]
+[ext_resource type="Texture2D" uid="uid://c6i0813pcp8cr" path="res://Assets/restartbutton.png" id="3_0ofvl"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_qbhkn")
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -61.0
+offset_right = 272.0
+offset_bottom = 265.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.507205, 0.393548)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("1_eep2w")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 3.0
+offset_right = 64.0
+offset_bottom = 23.0
+text = "Score: 0"
+
+[node name="HighScoreLabel" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 32.0
+offset_right = 103.0
+offset_bottom = 55.0
+text = "High Score: 0"
+
+[node name="TryAgain" type="Button" parent="."]
+offset_left = 439.0
+offset_top = 338.0
+offset_right = 803.0
+offset_bottom = 664.0
+scale = Vector2(0.428094, 0.326667)
+icon = ExtResource("3_0ofvl")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="TryAgain" to="." method="_on_try_again_pressed"]
