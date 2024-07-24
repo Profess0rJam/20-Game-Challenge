@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://phevgwx2mtn8"]
+
+[ext_resource type="Script" path="res://wall.gd" id="1_iow7q"]
+
+[sub_resource type="Gradient" id="Gradient_nlshw"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nyhls"]
+gradient = SubResource("Gradient_nlshw")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ad0f"]
+size = Vector2(92.4828, 66.5947)
+
+[node name="Wall" type="StaticBody2D"]
+position = Vector2(575.436, 33.063)
+rotation = 1.5708
+scale = Vector2(1.04884, 18.0194)
+script = ExtResource("1_iow7q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-21.0356, 0.301693)
+scale = Vector2(0.360153, 66.7285)
+texture = SubResource("GradientTexture1D_nyhls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-21.5122, 0.357189)
+shape = SubResource("RectangleShape2D_0ad0f")

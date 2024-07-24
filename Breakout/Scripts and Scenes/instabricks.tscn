@@ -1,0 +1,93 @@
+[gd_scene load_steps=2 format=3 uid="uid://51guq2t7si78"]
+
+[ext_resource type="PackedScene" uid="uid://de8ihfkm7h8cc" path="res://brick.tscn" id="1_yefo8"]
+
+[node name="LeadBrick" instance=ExtResource("1_yefo8")]
+position = Vector2(-112, 217)
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.15, 0.15)
+
+[node name="CollisionShape2D" parent="." index="1"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Brick" parent="." index="2" instance=ExtResource("1_yefo8")]
+position = Vector2(645.333, -224.001)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick2" parent="." index="3" instance=ExtResource("1_yefo8")]
+position = Vector2(975.998, -224.001)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick3" parent="." index="4" instance=ExtResource("1_yefo8")]
+position = Vector2(1290.66, -224.001)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick4" parent="." index="5" instance=ExtResource("1_yefo8")]
+position = Vector2(1637.33, -224.001)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick5" parent="." index="6" instance=ExtResource("1_yefo8")]
+position = Vector2(2080, -224.001)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick6" parent="." index="7" instance=ExtResource("1_yefo8")]
+position = Vector2(646, -140)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick7" parent="." index="8" instance=ExtResource("1_yefo8")]
+position = Vector2(976, -138.667)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick8" parent="." index="9" instance=ExtResource("1_yefo8")]
+position = Vector2(1290.66, -138.667)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick9" parent="." index="10" instance=ExtResource("1_yefo8")]
+position = Vector2(1637.33, -138.667)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick10" parent="." index="11" instance=ExtResource("1_yefo8")]
+position = Vector2(2080, -138.667)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick11" parent="." index="12" instance=ExtResource("1_yefo8")]
+position = Vector2(646, -54)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick12" parent="." index="13" instance=ExtResource("1_yefo8")]
+position = Vector2(976, -53.3325)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick13" parent="." index="14" instance=ExtResource("1_yefo8")]
+position = Vector2(1290.66, -53.3325)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick14" parent="." index="15" instance=ExtResource("1_yefo8")]
+position = Vector2(1637.33, -53.3325)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick15" parent="." index="16" instance=ExtResource("1_yefo8")]
+position = Vector2(2080, -53.3325)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick16" parent="." index="17" instance=ExtResource("1_yefo8")]
+position = Vector2(645.333, 63.9995)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick17" parent="." index="18" instance=ExtResource("1_yefo8")]
+position = Vector2(1290.66, 63.9995)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick18" parent="." index="19" instance=ExtResource("1_yefo8")]
+position = Vector2(2080, 63.9995)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick19" parent="." index="20" instance=ExtResource("1_yefo8")]
+position = Vector2(1637.33, 63.9995)
+scale = Vector2(0.28, 0.28)
+
+[node name="Brick20" parent="." index="21" instance=ExtResource("1_yefo8")]
+position = Vector2(976, 64)
+scale = Vector2(0.28, 0.28)

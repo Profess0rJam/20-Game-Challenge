@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmoq65rg75jy1"]
+
+[ext_resource type="Texture2D" uid="uid://ddq00dvd76lm4" path="res://ball.png" id="1_agdo7"]
+[ext_resource type="Script" path="res://ball.gd" id="1_d20tg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hm033"]
+radius = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p5m2n"]
+radius = 19.0
+
+[node name="Ball" type="CharacterBody2D"]
+script = ExtResource("1_d20tg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_agdo7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hm033")
+
+[node name="Detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+shape = SubResource("CircleShape2D_p5m2n")
+
+[connection signal="body_entered" from="Detector" to="." method="_on_detector_body_entered"]
