@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dr70yjpycjwlg"]
+
+[ext_resource type="Texture2D" uid="uid://dy1o37etomef1" path="res://Art/SpaceInvader1.png" id="1_oyses"]
+[ext_resource type="Script" path="res://invader.gd" id="1_ui34h"]
+[ext_resource type="PackedScene" uid="uid://m3fb2778cisv" path="res://enemy_pellet.tscn" id="2_idwrn"]
+[ext_resource type="Texture2D" uid="uid://n54ibhjnolej" path="res://Art/SpaceInvader2.png" id="2_plbwd"]
+[ext_resource type="Texture2D" uid="uid://4b76g7qoq3q1" path="res://Art/SpaceInvader3.png" id="3_ig0yo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d2vcs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_oyses")
+}],
+"loop": true,
+"name": &"Invader1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_plbwd")
+}],
+"loop": true,
+"name": &"Invader2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ig0yo")
+}],
+"loop": true,
+"name": &"Invader3",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6ckj"]
+size = Vector2(16, 16)
+
+[node name="Invader" type="CharacterBody2D" groups=["invaders"]]
+script = ExtResource("1_ui34h")
+
+[node name="EnemyPellet" parent="." instance=ExtResource("2_idwrn")]
+position = Vector2(0, -1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_d2vcs")
+animation = &"Invader2"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_q6ckj")

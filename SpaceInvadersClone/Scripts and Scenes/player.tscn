@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://13iie0p5edhg"]
+
+[ext_resource type="Texture2D" uid="uid://dw4bntlh8oy22" path="res://Art/SpaceInvadersPlayer.png" id="1_8vtis"]
+[ext_resource type="Script" path="res://player.gd" id="1_n0vqs"]
+[ext_resource type="PackedScene" uid="uid://c5rfhgouco7qi" path="res://pellet.tscn" id="3_8vjnt"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_n0vqs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_8vtis")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1, -14, -1, -11, -2, -11, -2, -3, -4, -3, -4, -5, -5, -5, -5, -4, -6, -4, -6, -3, -8, -3, -8, -4, -9, -4, -9, -6, -10, -6, -10, -10, -11, -10, -11, -6, -12, -6, -12, -4, -13, -4, -13, -1, -12, -1, -12, 2, -11, 2, -11, 5, -10, 5, -10, 2, -9, 2, -9, -1, -2, -1, -2, 3, -4, 3, -4, 12, -1, 12, -1, 10, 1, 10, 1, 12, 4, 12, 4, 3, 2, 3, 2, -1, 9, -1, 9, 2, 10, 2, 10, 5, 11, 5, 11, 2, 12, 2, 12, -1, 13, -1, 13, -4, 12, -4, 12, -6, 11, -6, 11, -10, 10, -10, 10, -6, 9, -6, 9, -4, 8, -4, 8, -3, 6, -3, 6, -4, 5, -4, 5, -5, 4, -5, 4, -3, 2, -3, 2, -11, 1, -11, 1, -14)
+
+[node name="Pellet" parent="." instance=ExtResource("3_8vjnt")]

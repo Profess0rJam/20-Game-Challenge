@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://db434ghn06p7d"]
+
+[ext_resource type="Texture2D" uid="uid://bx58m2jhud33f" path="res://Art/SpaceInvaderMothership.png" id="1_hi44c"]
+[ext_resource type="Script" path="res://mothership.gd" id="1_ygarx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4tn3"]
+size = Vector2(16, 10)
+
+[node name="Mothership" type="CharacterBody2D"]
+script = ExtResource("1_ygarx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_hi44c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_c4tn3")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

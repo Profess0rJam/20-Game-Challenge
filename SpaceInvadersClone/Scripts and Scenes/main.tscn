@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://ovkep18kasxb"]
+
+[ext_resource type="PackedScene" uid="uid://13iie0p5edhg" path="res://player.tscn" id="1_dui62"]
+[ext_resource type="Script" path="res://main.gd" id="1_jc65b"]
+[ext_resource type="PackedScene" uid="uid://c5rfhgouco7qi" path="res://pellet.tscn" id="2_6pixd"]
+[ext_resource type="PackedScene" uid="uid://2s7uiy31v5vc" path="res://invader_wave.tscn" id="4_2dyhi"]
+[ext_resource type="PackedScene" uid="uid://m3fb2778cisv" path="res://enemy_pellet.tscn" id="4_sqxym"]
+[ext_resource type="PackedScene" uid="uid://blktil8hfwikc" path="res://hud.tscn" id="5_c1e6g"]
+[ext_resource type="PackedScene" uid="uid://db434ghn06p7d" path="res://mothership.tscn" id="5_ssllf"]
+[ext_resource type="PackedScene" uid="uid://c5g8c7nl7rbo4" path="res://killbox.tscn" id="6_fl840"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_jc65b")
+pellet_scene = ExtResource("2_6pixd")
+invader_wave = ExtResource("4_2dyhi")
+enemypellet_scene = ExtResource("4_sqxym")
+mothership_scene = ExtResource("5_ssllf")
+
+[node name="Player" parent="." instance=ExtResource("1_dui62")]
+position = Vector2(300, 945)
+
+[node name="InvaderWave" parent="." instance=ExtResource("4_2dyhi")]
+position = Vector2(66, 34)
+
+[node name="EnemyPellet" parent="." instance=ExtResource("4_sqxym")]
+position = Vector2(-23, -14)
+
+[node name="Killbox" parent="." instance=ExtResource("6_fl840")]
+position = Vector2(0, 18)
+
+[node name="HUD" parent="." instance=ExtResource("5_c1e6g")]
+
+[node name="HorizontalTimer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="VerticalTimer" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="PlayerShootTimer" type="Timer" parent="."]
+wait_time = 0.35
+
+[node name="MothershipTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="bonuspoint" from="Player/Pellet" to="." method="_on_pellet_bonuspoint"]
+[connection signal="scored" from="Player/Pellet" to="." method="_on_pellet_scored"]
+[connection signal="shot" from="EnemyPellet" to="." method="_on_enemy_pellet_shot"]
+[connection signal="game_over_signal" from="Killbox" to="." method="_on_killbox_game_over_signal"]
+[connection signal="pressed" from="HUD/Try Again?" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="HUD/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="HUD/StartNewWave" to="." method="_on_start_new_wave_pressed"]
+[connection signal="timeout" from="HorizontalTimer" to="." method="_on_horizontal_timer_timeout"]
+[connection signal="timeout" from="VerticalTimer" to="." method="_on_vertical_timer_timeout"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
+[connection signal="timeout" from="PlayerShootTimer" to="." method="_on_player_shoot_timer_timeout"]
+[connection signal="timeout" from="MothershipTimer" to="." method="_on_mothership_timer_timeout"]
+
+[editable path="Player"]
+[editable path="HUD"]

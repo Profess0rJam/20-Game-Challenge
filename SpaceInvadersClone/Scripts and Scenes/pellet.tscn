@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5rfhgouco7qi"]
+
+[ext_resource type="Script" path="res://pellet.gd" id="1_sgwc4"]
+[ext_resource type="Texture2D" uid="uid://f5dg4nfo71xu" path="res://Art/SpaceInvadersPellet.png" id="1_uyo21"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3wuo"]
+size = Vector2(4, 6)
+
+[node name="Pellet" type="Area2D" groups=["pellets"]]
+script = ExtResource("1_sgwc4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("1_uyo21")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_q3wuo")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(0.2, 0.3)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

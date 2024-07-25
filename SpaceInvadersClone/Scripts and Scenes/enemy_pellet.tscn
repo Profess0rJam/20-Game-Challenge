@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://m3fb2778cisv"]
+
+[ext_resource type="Script" path="res://enemy_pellet.gd" id="1_pdxy2"]
+[ext_resource type="Texture2D" uid="uid://cfuaiin6os4bi" path="res://Art/SpaceInvadersEnemyPellet.png" id="1_xcege"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1u4gx"]
+size = Vector2(4, 6)
+
+[node name="EnemyPellet" type="Area2D" groups=["pellets"]]
+script = ExtResource("1_pdxy2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2, 1)
+scale = Vector2(2, 2)
+texture = ExtResource("1_xcege")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1u4gx")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(8.9407e-08, 5.96046e-08)
+scale = Vector2(0.2, 0.3)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

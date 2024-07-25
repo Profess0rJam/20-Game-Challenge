@@ -1,0 +1,186 @@
+[gd_scene load_steps=2 format=3 uid="uid://2s7uiy31v5vc"]
+
+[ext_resource type="PackedScene" uid="uid://dr70yjpycjwlg" path="res://invader.tscn" id="1_ndyws"]
+
+[node name="InvaderWave" type="Node2D" groups=["invaders"]]
+position = Vector2(96, 34)
+
+[node name="Invader16" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(95, 48)
+
+[node name="Invader17" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(215, 48)
+
+[node name="Invader18" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(245, 48)
+
+[node name="Invader19" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(275, 48)
+
+[node name="Invader20" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(305, 48)
+
+[node name="Invader21" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(335, 48)
+
+[node name="Invader22" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(365, 48)
+
+[node name="Invader23" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(395, 48)
+
+[node name="Invader" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(-25, 26)
+
+[node name="Invader5" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(95, 26)
+
+[node name="Invader6" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(125, 26)
+
+[node name="Invader7" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(155, 26)
+
+[node name="Invader8" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(185, 26)
+
+[node name="Invader9" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(-25, 48)
+
+[node name="Invader10" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(5, 48)
+
+[node name="Invader11" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(35, 48)
+
+[node name="Invader12" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(65, 48)
+
+[node name="Invader2" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(5, 26)
+
+[node name="Invader3" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(35, 26)
+
+[node name="Invader4" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(65, 26)
+
+[node name="Invader13" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(125, 48)
+
+[node name="Invader14" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(155, 48)
+
+[node name="Invader15" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(185, 48)
+
+[node name="Invader24" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(215, 26)
+
+[node name="Invader25" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(245, 26)
+
+[node name="Invader26" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(275, 26)
+
+[node name="Invader27" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(305, 26)
+
+[node name="Invader28" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(335, 26)
+
+[node name="Invader29" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(365, 26)
+
+[node name="Invader30" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(395, 26)
+
+[node name="Invader31" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(95, 90)
+
+[node name="Invader32" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(215, 90)
+
+[node name="Invader33" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(245, 90)
+
+[node name="Invader34" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(275, 90)
+
+[node name="Invader35" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(305, 90)
+
+[node name="Invader36" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(335, 90)
+
+[node name="Invader37" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(365, 90)
+
+[node name="Invader38" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(395, 90)
+
+[node name="Invader39" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(-25, 68)
+
+[node name="Invader40" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(95, 68)
+
+[node name="Invader41" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(125, 68)
+
+[node name="Invader42" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(155, 68)
+
+[node name="Invader43" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(185, 68)
+
+[node name="Invader44" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(-25, 90)
+
+[node name="Invader45" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(5, 90)
+
+[node name="Invader46" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(35, 90)
+
+[node name="Invader47" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(65, 90)
+
+[node name="Invader48" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(5, 68)
+
+[node name="Invader49" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(35, 68)
+
+[node name="Invader50" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(65, 68)
+
+[node name="Invader51" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(125, 90)
+
+[node name="Invader52" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(155, 90)
+
+[node name="Invader53" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(185, 90)
+
+[node name="Invader54" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(215, 68)
+
+[node name="Invader55" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(245, 68)
+
+[node name="Invader56" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(275, 68)
+
+[node name="Invader57" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(305, 68)
+
+[node name="Invader58" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(335, 68)
+
+[node name="Invader59" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(365, 68)
+
+[node name="Invader60" parent="." instance=ExtResource("1_ndyws")]
+position = Vector2(395, 68)

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://blktil8hfwikc"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score: 0"
+
+[node name="Try Again?" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -40.0
+offset_right = 72.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Over
+Try Again?"
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -15.5
+offset_right = 48.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+text = "Start Game"
+
+[node name="HighScoreLabel" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 21.0
+offset_right = 42.0
+offset_bottom = 44.0
+text = "High Score: "
+
+[node name="StartNewWave" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.5
+offset_top = -27.0
+offset_right = 65.5
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Wave Defeated
+Start New Wave"
+
+[node name="LivesLabel" type="Label" parent="."]
+offset_left = 529.0
+offset_top = 2.0
+offset_right = 577.0
+offset_bottom = 25.0
+text = "Lives :"
